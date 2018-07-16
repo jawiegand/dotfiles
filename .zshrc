@@ -5,11 +5,11 @@ export TERM="xterm-256color"
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+    # time that oh-my-zsh is loaded.
+    ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+    # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -31,17 +31,17 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+    COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+    # under VCS as dirty. This makes repository status check for large repositories
+        # much, much faster.
+        # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+    # stamp shown in the history command output.
+    # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+    # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -51,12 +51,12 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git # Useful for showing info about the current repo
+git # Useful for showing info about the current repo
     osx # OSX features (finder, spotify, etc)
     colored-man-pages
     zsh-syntax-highlighting
     github
-)
+    )
 
 # User configuration
 
@@ -68,11 +68,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+    if [[ -n $SSH_CONNECTION ]]; then
+        export EDITOR='vim'
+    else
+        export EDITOR='mvim'
+    fi
 
 # Setup For Versioning dotfiles ==============================================
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -95,25 +95,25 @@ fi
 alias bvim='vim -u ~/.basic.vimrc'
 
 # Source this file for ZSH
-alias ss='source ~/.zshrc'
+    alias ss='source ~/.zshrc'
 
 # Functions ===================================================================
 
 function tmux_attach() {
-	tmux a -t workspace || tmux new -s workspace
+    tmux a -t workspace || tmux new -s workspace
 }
 
-function makebranch () { 
-    git checkout -b $1 && git branch --set-upstream-to=mainline 
+function makebranch () {
+    git checkout -b $1 && git branch --set-upstream-to=mainline
 }
 
 git_all () {
-	find . -name ".git" -maxdepth 2 -type d -execdir git pull \;
+    find . -name ".git" -maxdepth 2 -type d -execdir git pull \;
 }
 
 # Other =======================================================================
 #
 # Stuff for jobs/specific environments/other things I don't want to publish.
-if [[ -f .amamzon.zshrc ]]; then
-    source .amazon.zshrc
+if [[ -f ~/.amazon.zshrc ]]; then
+    source ~/.amazon.zshrc
 fi

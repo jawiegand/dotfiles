@@ -1,0 +1,4 @@
+" config for Ideavim (Intellij plugin)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+source ~/.basic.vimrc

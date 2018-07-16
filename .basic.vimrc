@@ -41,6 +41,9 @@ set visualbell
 " highlight next match on search
 set incsearch
 
+" See those pesky whitespace
+set listchars=eol:⏎,tab:⌲→,trail:~,extends:⍄,precedes:⍃
+
 " Mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -81,7 +84,6 @@ noremap <silent> <leader>p :pu*<CR>
 
 " Enable/Disable spell check
 nmap <silent> <leader>z :set spell!<cr>
-
 
 " Remap Up/Down to <C-p>/<C-m> so we don't have to take our hands of the KB +
 " filtering
