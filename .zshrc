@@ -60,7 +60,7 @@ plugins=(
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin::$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin::$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,6 +91,12 @@ if (( $+commands[exa] )); then
     alias ls='exa -l'
 fi
 
+# vim w/o my plugins
+alias bvim='vim -u ~/.basic.vimrc'
+
+# Source this file for ZSH
+alias ss='source ~/.zshrc'
+
 # Functions ===================================================================
 
 function tmux_attach() {
@@ -99,6 +105,10 @@ function tmux_attach() {
 
 function makebranch () { 
     git checkout -b $1 && git branch --set-upstream-to=mainline 
+}
+
+git_all () {
+	find . -name ".git" -maxdepth 2 -type d -execdir git pull \;
 }
 
 # Other =======================================================================
