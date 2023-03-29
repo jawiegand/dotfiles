@@ -110,10 +110,3 @@ function makebranch () {
 git_all () {
     find . -name ".git" -maxdepth 2 -type d -execdir git pull \;
 }
-
-# Other =======================================================================
-#
-# Stuff for jobs/specific environments/other things I don't want to publish.
-if [[ -f ~/.amazon.zshrc ]]; then
-    source ~/.amazon.zshrc
-fi
